@@ -38,6 +38,7 @@ public class ControllerHome {
         mm.put("listProductSale", productService.getListSale(16));
         mm.put("listProductFeature", productService.getListProductFeatured(16));
         mm.put("listProductBestSeller", productService.getListBestSeller(12));
+        mm.put("mapProductBestSellerByCategory", productService.getListProductBestSellerByCategory(2));
         return "customer/index";
     }
     
@@ -50,6 +51,7 @@ public class ControllerHome {
         mm.put("listProductSale", productService.getListSale(16));
         mm.put("listProductFeature", productService.getListProductFeatured(16));
         mm.put("listProductBestSeller", productService.getListBestSeller(12));
+        mm.put("mapProductBestSellerByCategory", productService.getListProductBestSellerByCategory(2));
         return "customer/index";
     }
 }

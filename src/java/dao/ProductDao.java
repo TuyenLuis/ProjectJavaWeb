@@ -4,8 +4,9 @@
  * and open the template in the editor.
  */
 package dao;
+import java.util.HashMap;
 import java.util.List;
-import model.Products;
+import model.*;
 
 /**
  *
@@ -28,7 +29,11 @@ public interface ProductDao {
     
     public List<Products> getListSale(int limit);
     
+    public List<Products> getAll();
+    
     public int totalItem();
 
     public List<Products> getListBestSeller(int limit);
+    
+    public HashMap<Categories, List<Products>> getListProductBestSellerByCategory(int limit);
 }

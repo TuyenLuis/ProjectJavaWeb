@@ -1420,7 +1420,7 @@ select option
 {
 	display: block;
 	position: relative;
-	max-width: 100%;
+	max-width: 90%;
 }
 .product_content
 {
@@ -1457,6 +1457,8 @@ select option
 }
 .product_name
 {
+        width: 90%;
+        margin: auto;
 	margin-top: 4px;
 	overflow: hidden;
 }

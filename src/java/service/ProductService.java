@@ -5,7 +5,9 @@
  */
 package service;
 
+import java.util.HashMap;
 import java.util.List;
+import model.Categories;
 import model.Products;
 
 /**
@@ -32,4 +34,8 @@ public interface ProductService {
     public List<Products> getListBestSeller(int limit);
     
     public int totalItem();
+    
+    public List<Products> getAll();
+    
+    public HashMap<Categories, List<Products>> getListProductBestSellerByCategory(int limit);
 }

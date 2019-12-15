@@ -8,10 +8,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>footer</title>
-    </head>
     <body>
         <footer class="footer">
             <div class="container">
@@ -42,7 +38,7 @@
                         <div class="footer_column">
                             <ul class="footer_list footer_list_2">
                                 <c:forEach var="item" items="${listCategoriesFooter}">
-                                    <li><a href="javascript:void(0)">${item.name}</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/category/${item.id}">${item.name}</a></li>
                                 </c:forEach>
                             </ul>
                         </div>
@@ -109,6 +105,5 @@
     <script src="<c:url value="/resources/plugins/OwlCarousel2-2.2.1/owl.carousel.js"/>"></script>
     <script src="<c:url value="/resources/plugins/slick-1.8.0/slick.js"/>"></script>
     <script src="<c:url value="/resources/plugins/easing/easing.js"/>"></script>
-    <script src="<c:url value="/resources/js/custom.js"/>"></script>
 </body>
 </html>

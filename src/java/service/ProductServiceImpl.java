@@ -8,6 +8,8 @@ package service;
 import java.util.List;
 import model.Products;
 import dao.ProductDao;
+import java.util.HashMap;
+import model.Categories;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -69,5 +71,15 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public int totalItem() {
         return productDao.totalItem();
+    }
+
+    @Override
+    public HashMap<Categories, List<Products>> getListProductBestSellerByCategory(int limit) {
+        return productDao.getListProductBestSellerByCategory(limit);
+    }
+
+    @Override
+    public List<Products> getAll() {
+        return productDao.getAll();
     }
 }

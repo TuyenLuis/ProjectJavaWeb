@@ -5,7 +5,10 @@
  */
 package dao;
 
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
+import model.Categories;
 import model.Products;
 import org.hibernate.Query;
 import org.hibernate.Session;
@@ -109,7 +112,7 @@ public class ProductDaoImpl implements ProductDao{
     @Override
     public List<Products> getListProductByCategory(int categoryId) {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
+        Transaction transaction = null;
         try {
             transaction = session.beginTransaction();
             Query query = session.createQuery("FROM Products as pr WHERE pr.categories.id = :categoryId");
@@ -132,7 +135,7 @@ public class ProductDaoImpl implements ProductDao{
     @Override
     public List<Products> getListProductByCategoryAndLimit(int categoryId, int limit) {
         Session session = HibernateUtil.getSessionFactory().openSession();
-        Transaction transaction = session.beginTransaction();
+        Transaction transaction = null;
         try {
             transaction = session.beginTransaction();
             Query query = session.createQuery("FROM Products as pr WHERE pr.categories.id = :categoryId");
@@ -229,6 +232,58 @@ public class ProductDaoImpl implements ProductDao{
             transaction = session.beginTransaction();
             Query query = session.createSQLQuery("EXEC Usp_GetBestSeller").addEntity(Products.class);
 //            query.setMaxResults(limit);
+            List<Products> listProducts = query.list();
+            transaction.commit();
+            return listProducts;
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            session.flush();
+            session.close();
+        }
+        return null;
+    }
+
+    @Override
+    public HashMap<Categories, List<Products>> getListProductBestSellerByCategory(int limit) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            Query query = session.createSQLQuery("EXEC Usp_GetCategoriesBestSeller").addEntity(Categories.class);
+//            query.setMaxResults(limit);
+            List<Categories> listCategory = query.list();
+            Iterator iterator = listCategory.iterator();
+            HashMap<Categories, List<Products>> map = new HashMap<Categories, List<Products>>();
+            while (iterator.hasNext()) {
+                Categories category = (Categories) iterator.next();
+                query = session.createSQLQuery("EXEC Usp_GetProductsBestSellerByCategory :CategoryId").addEntity(Products.class).setParameter("CategoryId", category.getId());
+                List<Products> listProducts = query.list();
+                map.put(category, listProducts);
+            }
+            return map;
+        } catch (Exception e) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            e.printStackTrace();
+        } finally {
+            session.flush();
+            session.close();
+        }
+        return null;
+    }
+
+    @Override
+    public List<Products> getAll() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            Query query = session.createQuery("FROM Products");
             List<Products> listProducts = query.list();
             transaction.commit();
             return listProducts;

@@ -38,4 +38,6 @@ public interface ProductService {
     public List<Products> getAll();
     
     public HashMap<Categories, List<Products>> getListProductBestSellerByCategory(int limit);
+    
+    public List<Products> searchProduct(String search, Integer categoryId);
 }

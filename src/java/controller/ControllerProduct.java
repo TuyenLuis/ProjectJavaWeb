@@ -12,6 +12,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import service.*;
 
 /**
@@ -39,5 +40,15 @@ public class ControllerProduct {
         mm.put("listCategoriesFooter", categoryService.getListFilter());
         utilitiesService.showMyShoppingCart(session);
         return "customer/product_detail";
+    }
+    
+    @RequestMapping(value = "/search-product", method = RequestMethod.GET)
+    public String viewCategory(ModelMap mm, HttpSession session, @RequestParam("search") String search, @RequestParam("categoryId") Integer categoryId) {
+        mm.put("listProductByCategory", productService.searchProduct(search, categoryId));
+        mm.put("listCategoryFilter", categoryService.getListFilter());  
+        mm.put("listAllCategories", categoryService.getAll()); 
+        mm.put("listCategoriesFooter", categoryService.getListFilter());
+        utilitiesService.showMyShoppingCart(session);
+        return "customer/category"; 
     }
 }

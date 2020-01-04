@@ -36,4 +36,6 @@ public interface ProductDao {
     public List<Products> getListBestSeller(int limit);
     
     public HashMap<Categories, List<Products>> getListProductBestSellerByCategory(int limit);
+    
+    public List<Products> searchProduct(String search, Integer categoryId);
 }

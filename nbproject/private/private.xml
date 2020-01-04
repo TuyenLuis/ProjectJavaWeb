@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/ProductService.java</file>
             <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/OrderItemServiceImpl.java</file>
             <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/controller/ControllerProduct.java</file>
             <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/dao/OrderDaoImpl.java</file>
@@ -18,6 +19,8 @@
             <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/dao/OrderDao.java</file>
             <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/model/Orders.java</file>
             <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/CartServiceImpl.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/web/WEB-INF/customer/checkout.jsp</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/model/Products.java</file>
             <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/OrderItemService.java</file>
             <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/ProductServiceImpl.java</file>
             <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/model/Users.java</file>
@@ -30,7 +33,6 @@
             <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/UtilitiesServiceImpl.java</file>
             <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/UtilitiesService.java</file>
             <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/model/ReturnModel.java</file>
-            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/model/Sysdiagrams.java</file>
             <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/controller/ControllerCart.java</file>
             <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/dao/OrderItemDao.java</file>
             <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/util/hibernate.reveng.xml</file>

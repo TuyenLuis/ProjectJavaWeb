@@ -231,7 +231,6 @@ public class ProductDaoImpl implements ProductDao{
         try {
             transaction = session.beginTransaction();
             Query query = session.createSQLQuery("EXEC Usp_GetBestSeller").addEntity(Products.class);
-//            query.setMaxResults(limit);
             List<Products> listProducts = query.list();
             transaction.commit();
             return listProducts;
@@ -254,7 +253,6 @@ public class ProductDaoImpl implements ProductDao{
         try {
             transaction = session.beginTransaction();
             Query query = session.createSQLQuery("EXEC Usp_GetCategoriesBestSeller").addEntity(Categories.class);
-//            query.setMaxResults(limit);
             List<Categories> listCategory = query.list();
             Iterator iterator = listCategory.iterator();
             HashMap<Categories, List<Products>> map = new HashMap<Categories, List<Products>>();
@@ -292,6 +290,31 @@ public class ProductDaoImpl implements ProductDao{
                 transaction.rollback();
             }
             e.printStackTrace();
+        } finally {
+            session.flush();
+            session.close();
+        }
+        return null;
+    }
+
+    @Override
+    public List<Products> searchProduct(String search, Integer categoryId) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        Transaction transaction = null;
+        try {
+            transaction = session.beginTransaction();
+            Query query = session.createSQLQuery("EXEC Usp_SearchProduct :Search, :CategoryId")
+                            .addEntity(Products.class)
+                            .setParameter("CategoryId", categoryId)
+                            .setParameter("Search", search);
+            List<Products> listProducts = query.list();
+            transaction.commit();
+            return listProducts;
+        } catch (Exception ex) {
+            if (transaction != null) {
+                transaction.rollback();
+            }
+            ex.printStackTrace();
         } finally {
             session.flush();
             session.close();

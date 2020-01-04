@@ -73,7 +73,7 @@
                             <div class="header_search">
                                 <div class="header_search_content">
                                     <div class="header_search_form_container">
-                                        <form action="#" class="header_search_form clearfix">
+                                        <div class="header_search_form clearfix">
                                             <input type="search" required="required" class="header_search_input"
                                                    placeholder="Search for products...">
                                             <div class="custom_dropdown">
@@ -82,15 +82,15 @@
                                                     <i class="fas fa-chevron-down"></i>
                                                     <ul class="custom_list clc">
                                                         <c:forEach var="item" items="${listCategoryFilter}">
-                                                            <li><a class="clc" href="javascript:void(0)">${item.name}</a></li>
+                                                            <li><a class="clc" href="javascript:void(0)" onclick="selectCategory(${item.id})">${item.name}</a></li>
                                                         </c:forEach>
                                                     </ul>
                                                 </div>
                                             </div>
-                                            <button type="submit" class="header_search_button trans_300" value="Submit">
+                                            <button type="button" onclick="searchProduct()" class="header_search_button trans_300" value="Submit">
                                                 <img src="<c:url value="/resources/images/search.png" />" alt="">
                                             </button>
-                                        </form>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -164,6 +164,16 @@
                     </div>
                 </div>
             </nav>
+            <script>
+                var categoryId = 0;
+                var selectCategory = function (id) {
+                    categoryId = id;
+                }
+                var searchProduct = function () {
+                    var search = $('.header_search_input').val();
+                    window.location.href = 'http://localhost:8080/ProjectJavaWeb/product/search-product?search=' + search + '&categoryId=' + categoryId;
+                }
+            </script>
         </header>
     </body>
 </html>

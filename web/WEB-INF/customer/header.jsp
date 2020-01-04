@@ -112,11 +112,11 @@
                                     <div class="cart_container d-flex flex-row align-items-center justify-content-end">
                                         <div class="cart_icon">
                                             <img src="<c:url value="/resources/images/cart.png" />" alt="">
-                                            <div class="cart_count"><span>10</span></div>
+                                            <div class="cart_count cart_total_items"><span>${sessionScope.CART_TOTAL_NUM}</span></div>
                                         </div>
                                         <div class="cart_content">
-                                            <div class="cart_text"><a href="javascript:void(0)">Cart</a></div>
-                                            <div class="cart_price">$85</div>
+                                            <div class="cart_text"><a href="${pageContext.request.contextPath}/shopping-cart">Cart</a></div>
+                                            <div class="cart_price cart_total_price">&#36;${sessionScope.CART_TOTAL_PRICE}</div>
                                         </div>
                                     </div>
                                 </div>
@@ -155,8 +155,8 @@
                                 <div class="main_nav_menu ml-auto">
                                     <ul class="standard_dropdown main_nav_dropdown">
                                         <li><a href="${pageContext.request.contextPath}/home.html">Home<i class="fas fa-chevron-down"></i></a></li>
-                                        <li><a href="${pageContext.request.contextPath}/cart.html">Cart<i class="fas fa-chevron-down"></i></a></li>
-                                        <li><a href="${pageContext.request.contextPath}/contact.html">Contact<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="${pageContext.request.contextPath}/category/0">Categories<i class="fas fa-chevron-down"></i></a></li>
+                                        <li><a href="${pageContext.request.contextPath}/shopping-cart">Cart<i class="fas fa-chevron-down"></i></a></li>
                                     </ul>
                                 </div>
                             </div>

@@ -23,6 +23,10 @@
         <link rel="stylesheet" type="text/css" href="<c:url value="/resources/plugins/jquery-ui-1.12.1.custom/jquery-ui.css"/>">
         <link rel="stylesheet" type="text/css" href="<c:url value="/resources/styles/shop_styles.css"/>">
         <link rel="stylesheet" type="text/css" href="<c:url value="/resources/styles/shop_responsive.css"/>">
+        <script src="<c:url value="/resources/js/jquery-3.3.1.min.js" />"></script>
+        <script src="<c:url value="/resources/components/AlertifyJS/alertify.min.js"/>"></script>
+        <!--<script src="<c:url value="/resources/components/sweetalert2/dist/sweetalert2.all.min.js"/>"></script>-->
+        <script src="<c:url value="/resources/js/shopping_cart.js"/>" ></script>
     </head>
     <body>
         <jsp:include page="header.jsp"></jsp:include>
@@ -106,7 +110,7 @@
                                 <div class="product_grid_border"></div>
 
                                 <c:forEach var="item" items="${listProductByCategory}">
-                                    <div class="product_item ${ item.isProductNew ? "is_new" : ""} ${ item.promotionPrice != null ? "discount" : ""}" title="item.name">
+                                    <div onclick="window.location.href = '${pageContext.request.contextPath}/product/${item.id}'" class="product_item ${ item.isProductNew ? "is_new" : ""} ${ item.promotionPrice != null ? "discount" : ""}" title="item.name">
                                         <div class="product_border"></div>
                                         <div class="product_image d-flex flex-column align-items-center justify-content-center"><img src="${item.image}" alt=""></div>
                                         <div class="product_content">

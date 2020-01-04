@@ -1,17 +1,13 @@
 package model;
-// Generated Dec 8, 2019 2:11:48 PM by Hibernate Tools 4.3.1
+// Generated Jan 4, 2020 3:58:57 PM by Hibernate Tools 4.3.1
 
 
 import java.io.Serializable;
 import java.util.Date;
-import java.util.HashSet;
-import java.util.Set;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -35,7 +31,6 @@ public class Users  implements java.io.Serializable {
      private String address;
      private String phone;
      private String email;
-     private Set<Orders> orderses = new HashSet<Orders>(0);
 
     public Users() {
     }
@@ -44,7 +39,7 @@ public class Users  implements java.io.Serializable {
     public Users(int id) {
         this.id = id;
     }
-    public Users(int id, String userName, String password, Date createdAt, Integer role, String address, String phone, String email, Set<Orders> orderses) {
+    public Users(int id, String userName, String password, Date createdAt, Integer role, String address, String phone, String email) {
        this.id = id;
        this.userName = userName;
        this.password = password;
@@ -53,11 +48,9 @@ public class Users  implements java.io.Serializable {
        this.address = address;
        this.phone = phone;
        this.email = email;
-       this.orderses = orderses;
     }
    
     @Id @GeneratedValue
-
 
     
     @Column(name="Id", unique=true, nullable=false)
@@ -137,15 +130,6 @@ public class Users  implements java.io.Serializable {
     
     public void setEmail(String email) {
         this.email = email;
-    }
-
-@OneToMany(fetch=FetchType.LAZY, mappedBy="users")
-    public Set<Orders> getOrderses() {
-        return this.orderses;
-    }
-    
-    public void setOrderses(Set<Orders> orderses) {
-        this.orderses = orderses;
     }
 
 

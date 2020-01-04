@@ -19,9 +19,14 @@
         <link rel="stylesheet" type="text/css" href="<c:url value="/resources/plugins/OwlCarousel2-2.2.1/owl.carousel.css"/>">
         <link rel="stylesheet" type="text/css" href="<c:url value="/resources/plugins/OwlCarousel2-2.2.1/owl.theme.default.css"/>">
         <link rel="stylesheet" type="text/css" href="<c:url value="/resources/plugins/OwlCarousel2-2.2.1/animate.css"/>">
+        <link rel="stylesheet" type="text/css" href="<c:url value="/resources/components/AlertifyJS/css/alertify.min.css"/>">
         <link rel="stylesheet" type="text/css" href="<c:url value="/resources/plugins/slick-1.8.0/slick.css"/>">
         <link rel="stylesheet" type="text/css" href="<c:url value="/resources/styles/product_styles.css"/>">
         <link rel="stylesheet" type="text/css" href="<c:url value="/resources/styles/product_responsive.css"/>">
+        <script src="<c:url value="/resources/js/jquery-3.3.1.min.js" />"></script>
+        <script src="<c:url value="/resources/components/AlertifyJS/alertify.min.js"/>"></script>
+        <!--<script src="<c:url value="/resources/components/sweetalert2/dist/sweetalert2.all.min.js"/>"></script>-->
+        <script src="<c:url value="/resources/js/shopping_cart.js"/>" ></script>
     </head>
     <body>
         <div class="super_container">
@@ -48,7 +53,7 @@
                         <div class="col-lg-5 order-3">
                             <div class="product_description">
                                 <div class="product_category">${product.categories.name}</div>
-                                <div class="product_name">${product.name}</div>
+                                <div class="product_name" data-uid="${product.id}">${product.name}</div>
                                 <div class="rating_r rating_r_4 product_rating"><i></i><i></i><i></i><i></i><i></i></div>
                                 <div class="product_text"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas fermentum. laoreet turpis, nec sollicitudin dolor cursus at. Maecenas aliquet, dolor a faucibus efficitur, nisi tellus cursus urna, eget dictum lacus turpis.</p></div>
                                 <div class="order_info d-flex flex-row">
@@ -71,7 +76,7 @@
                                             <div class="product_price product_price_sale">&#36;${product.price}</div>
                                         </c:if>
                                         <div class="button_container" style="margin-top: 20px;">
-                                            <button type="button" class="button cart_button">Add to Cart</button>
+                                            <button type="button" class="button cart_button" id="addToCartProductDetail">Add to Cart</button>
                                             <div class="product_fav"><i class="fas fa-heart"></i></div>
                                         </div>
                                     </form>

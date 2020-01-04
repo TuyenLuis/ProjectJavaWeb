@@ -94,7 +94,6 @@
         </div>
     </div>
 
-    <script src="<c:url value="/resources/js/jquery-3.3.1.min.js" />"></script>
     <script src="<c:url value="/resources/styles/bootstrap4/popper.js"/>"></script>
     <script src="<c:url value="/resources/styles/bootstrap4/bootstrap.min.js"/>"></script>
     <script src="<c:url value="/resources/plugins/greensock/TweenMax.min.js"/>"></script>

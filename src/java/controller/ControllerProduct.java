@@ -28,12 +28,16 @@ public class ControllerProduct {
     @Autowired
     private CategoryService categoryService;
     
+    @Autowired
+    private UtilitiesService utilitiesService;
+    
     @RequestMapping(value = "{productId}", method = RequestMethod.GET)
     public String viewProductDetai(ModelMap mm, HttpSession session, @PathVariable("productId") int productId) { 
         mm.put("product", productService.findById(productId));
         mm.put("listCategoryFilter", categoryService.getListFilter());  
         mm.put("listAllCategories", categoryService.getAll()); 
         mm.put("listCategoriesFooter", categoryService.getListFilter());
+        utilitiesService.showMyShoppingCart(session);
         return "customer/product_detail";
     }
 }

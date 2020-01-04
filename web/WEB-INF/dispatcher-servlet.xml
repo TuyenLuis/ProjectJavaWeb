@@ -59,4 +59,13 @@
     
     <bean id="productDao" class="dao.ProductDaoImpl" />
     <bean id="productService" class="service.ProductServiceImpl" />
+    
+    <bean id="cartService" class="service.CartServiceImpl" />
+    <bean id="utilitiesService" class="service.UtilitiesServiceImpl"/>
+    
+    <bean id="orderItemDao" class="dao.OrderItemDaoImpl" />
+    <bean id="orderItemService" class="service.OrderItemServiceImpl" />
+    
+    <bean id="orderDao" class="dao.OrderDaoImpl" />
+    <bean id="orderService" class="service.OrderServiceImpl" />
 </beans>

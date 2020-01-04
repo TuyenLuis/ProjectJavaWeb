@@ -2,6 +2,45 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/OrderItemServiceImpl.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/controller/ControllerProduct.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/dao/OrderDaoImpl.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/CategoryServiceImpl.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/web/WEB-INF/customer/category.jsp</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/dao/ProductDao.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/util/HibernateUtil.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/dao/CategoryDao.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/controller/ControllerCategory.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/dao/OrderItemDaoImpl.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/util/hibernate.cfg.xml</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/nbproject/build-impl.xml</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/dao/OrderDao.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/model/Orders.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/CartServiceImpl.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/OrderItemService.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/ProductServiceImpl.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/model/Users.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/controller/ControllerHome.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/CartService.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/model/Categories.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/web/WEB-INF/customer/content.jsp</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/dao/ProductDaoImpl.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/web/WEB-INF/customer/header.jsp</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/UtilitiesServiceImpl.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/UtilitiesService.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/model/ReturnModel.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/model/Sysdiagrams.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/controller/ControllerCart.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/dao/OrderItemDao.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/util/hibernate.reveng.xml</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/model/OrderItems.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/OrderServiceImpl.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/dao/CategoryDaoImpl.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/web/WEB-INF/customer/cart.jsp</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/controller/ControllerOrder.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/src/java/service/OrderService.java</file>
+            <file>file:/F:/Project/JavaProject/ProjectJavaWeb/web/WEB-INF/dispatcher-servlet.xml</file>
+        </group>
     </open-files>
 </project-private>

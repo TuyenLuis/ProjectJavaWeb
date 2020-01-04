@@ -48,10 +48,10 @@ Contributor(s):
     <property name="hibernate.show_sql">true</property>
     <property name="hibernate.current_session_context_class">thread</property>
     <property name="hibernate.query.factory_class">org.hibernate.hql.internal.classic.ClassicQueryTranslatorFactory</property>
-    <mapping class="model.Orders"/>
-    <mapping class="model.Users"/>
     <mapping class="model.OrderItems"/>
+    <mapping class="model.Orders"/>
     <mapping class="model.Categories"/>
+    <mapping class="model.Users"/>
     <mapping class="model.Products"/>
   </session-factory>
 </hibernate-configuration>

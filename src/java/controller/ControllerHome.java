@@ -28,6 +28,9 @@ public class ControllerHome {
     
     @Autowired
     private ProductService productService;
+    
+    @Autowired
+    private UtilitiesService utilitiesService;
 
     @RequestMapping(value = "", method = RequestMethod.GET)
     public String viewHome(ModelMap mm, HttpSession session) {
@@ -39,6 +42,7 @@ public class ControllerHome {
         mm.put("listProductFeature", productService.getListProductFeatured(16));
         mm.put("listProductBestSeller", productService.getListBestSeller(12));
         mm.put("mapProductBestSellerByCategory", productService.getListProductBestSellerByCategory(2));
+        utilitiesService.showMyShoppingCart(session);
         return "customer/index";
     }
     
@@ -52,6 +56,7 @@ public class ControllerHome {
         mm.put("listProductFeature", productService.getListProductFeatured(16));
         mm.put("listProductBestSeller", productService.getListBestSeller(12));
         mm.put("mapProductBestSellerByCategory", productService.getListProductBestSellerByCategory(2));
+        utilitiesService.showMyShoppingCart(session);
         return "customer/index";
     }
 }

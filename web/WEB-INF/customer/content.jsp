@@ -182,7 +182,7 @@
                                                         <div class="product_price discount">&#36;${item.promotionPrice}<span>&#36;${item.price}</span></div>
                                                         <div class="product_name"><div><a href="${pageContext.request.contextPath}/product/${item.id}">${item.name}</a></div></div>
                                                         <div class="product_extras">
-                                                            <button class="product_cart_button">Add to Cart</button>
+                                                            <button class="product_cart_button" onclick="addProductToCart(${item.id})">Add to Cart</button>
                                                         </div>
                                                     </div>
                                                     <div class="product_fav"><i class="fas fa-heart"></i></div>
@@ -210,7 +210,7 @@
                                                         <div class="product_price discount">&#36;${item.promotionPrice}<span>&#36;${item.price}</span></div>
                                                         <div class="product_name"><div><a href="${pageContext.request.contextPath}/product/${item.id}">${item.name}</a></div></div>
                                                         <div class="product_extras">
-                                                            <button class="product_cart_button">Add to Cart</button>
+                                                            <button class="product_cart_button" onclick="addProductToCart(${item.id})">Add to Cart</button>
                                                         </div>
                                                     </div>
                                                     <div class="product_fav"><i class="fas fa-heart"></i></div>
